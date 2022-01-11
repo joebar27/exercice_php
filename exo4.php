@@ -12,7 +12,7 @@ print "Entrer le numéro de département que vous voulez connaitre :" . PHP_EOL;
 $deptNb = readline();
 
 foreach($datas as $data){
-    if($deptNb== $data[1]){
+    if($deptNb == $data[1]){
         print $data[3];
     }
 }

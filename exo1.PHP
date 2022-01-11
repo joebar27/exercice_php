@@ -23,7 +23,7 @@ function Date_Verif($date_choose)
     return ;
 }
 
-print 'Veuillez entrer un date pour vérifier si elle est férié, au format "01-12-1900"' . PHP_EOL;
+print 'Veuillez entrer une date pour vérifier si elle est férié, au format "01-12-1900"' . PHP_EOL;
 $date_choose = readline();
 
 print Date_Verif($date_choose);
