@@ -5,13 +5,7 @@ function Date_Verif($date_choose)
     $date = strtotime($date_choose);
     $jour = date('d', $date);
     $mois = date('m', $date);
-    // $annee = date('Y', $date);
-
-    // print "date : " . $date . PHP_EOL;
-    // print "jour : " . $jour . PHP_EOL;
-    // print "mois : " . $mois . PHP_EOL;
-    // print "année : " . $annee . PHP_EOL;
-
+    
     // dates fériées fixes
     if (($jour == 1 && $mois == 1)          // 1er janvier
         || ($jour == 1 && $mois == 5)       // 1er mai
