@@ -4,16 +4,19 @@ function Winner()
     require 'data/tableau_datas.php';
 
     foreach ($tableau as $data) {
-        $arrayAccount = substr($data[5], 1);
-        $listAccountInt[] = (int)str_replace(',', '', $arrayAccount);
+        $arraySolde = substr($data[5], 1);
+        $listSoldeInt[] = (int)str_replace(',', '', $arraySolde);
+        // Pour remplacer les deux ligne du dessus :
+        // $listSoldeInt[] = (int)str_replace('$', '', str_replace(',', '', $data[5]));
+
     }
-    $winnerAccount = 0;
-    foreach ($listAccountInt as $key =>$account) {
-        if ($account > $winnerAccount) {
+    $winnerSolde = 0;
+    foreach ($listSoldeInt as $key =>$solde) {
+        if ($solde > $winnerSolde) {
             $winnerId = $key;
-            $winnerAccount = $account;
+            $winnerSolde = $solde;
         }
     }
-    print $tableau[$winnerId][0] . " avec un gain de : $" . $winnerAccount . " est notre winner";
+    print $tableau[$winnerId][0] . " avec un gain de : $" . $winnerSolde . " est notre winner";
 }
 print_r(Winner());
